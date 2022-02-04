@@ -10,7 +10,7 @@ var timmerId;
 var strokes;
 
 
-let random_quotes = "http://api.quotable.io/random";
+let random_quotes = "https://api.quotable.io/random";
 let getRamdomQuotes = async() => {
     let response = await fetch(random_quotes);
     let data = await response.json();
@@ -91,8 +91,7 @@ window.addEventListener('keydown',(event)=>{
         quotes.childNodes[idx].classList.add('incorrect');
        }
        idx++;
-       if(idx == myQuotes.length){
-   
+       if(idx == myQuotes.length){   
            populateRandomQuotes();
        }
     }
